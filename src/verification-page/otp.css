@@ -1,0 +1,35 @@
+body{
+    color:white;
+}
+
+#otp-container{
+    width: 500px;
+    height:200px;
+    background-color: navy;
+    opacity:0.8;
+    margin-top:20%
+}
+#otp-head{
+    padding: 20px;
+}
+#otp-label{
+    font-size: 20px;
+    display: inline-block;
+    width: 100px;
+   margin-left: 50px;
+
+}
+#otp-input{
+    border: none;
+    padding: 10px;
+}
+#otp-submit{
+    padding:10px;
+    border: none;
+/* background-color: #6CB4EE; */
+background-color: #FFAA33;
+font-family: Cambria;
+}
+#otp-submit:hover{
+    background-color: #6CB4EE;
+}
