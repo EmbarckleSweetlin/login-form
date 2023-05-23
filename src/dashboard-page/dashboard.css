@@ -1,0 +1,12 @@
+
+#dashboard-nav{
+    background-color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  opacity:0.7;
+
+}
+#dashboard-head{
+    font-size: 50px;
+}
