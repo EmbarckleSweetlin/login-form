@@ -45,6 +45,7 @@ export function SignupForm() {
           <label className="signup-label">User Name</label>
           <input
           id="singup-nameInput"
+          className="signupInput"
             type="text"
             placeholder="user name"
             onChange={(e) => {
@@ -55,6 +56,7 @@ export function SignupForm() {
           <label className="signup-label">Email</label>
           <input
            id="singup-mailInput"
+           className="signupInput"
             type="email"
             placeholder="mail"
             pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
@@ -66,6 +68,7 @@ export function SignupForm() {
           <label className="signup-label">Password</label>
           <input
            id="singup-passInput"
+           className="signupInput"
             type="password"
             placeholder="password"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -80,6 +83,7 @@ export function SignupForm() {
           <input
            id="singup-conpassInput"
             type="password"
+            className="signupInput"
             placeholder="Confirm password"
             onChange={(e) => {
               setConfirmPassword(e.target.value);
@@ -88,7 +92,7 @@ export function SignupForm() {
        
 
         <input id="signup-button" type="submit" value="Signup" />
-        <div>
+        <div id="signup-div">
           <p id="signup-para">Already have an account?</p>
           <a id="loginLink" href="/">Login</a>
         </div>
