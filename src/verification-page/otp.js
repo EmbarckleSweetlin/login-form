@@ -39,7 +39,7 @@ export function Otp() {
           alert(res.data);
         }
       });
-    }
+    } 
   };
 
   return (
@@ -50,8 +50,8 @@ export function Otp() {
       id="otp-input"
         type="text"
         placeholder="enter your otp"
-        onChange={(e) => setOtp(e.target.value)} required
-      ></input>
+        onChange={(e) => setOtp(e.target.value)} 
+      required></input>
       <button id="otp-submit" onClick={handleClick}>Submit</button>
     </div>
   );

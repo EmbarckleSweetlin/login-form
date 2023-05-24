@@ -38,7 +38,8 @@ export function LoginForm() {
             id="login-mailInput"
             className="login-input"
             type="email"
-            pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
+            // pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}" 
+            pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
             placeholder="Enter your mail id here"
             onChange={(e) => setEmail(e.target.value)} required
           ></input>
