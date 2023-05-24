@@ -39,10 +39,7 @@ app.post("/signup", (req, res) => {
     "SELECT EXISTS(SELECT * FROM users WHERE email=? )",
     [email],
     (err, result) => {
-      if(email==undefined || password==undefined || userName==undefined ){
-        res.send('please enter the details');
-      }
-      else if (Object.values(result[0])[0] == 0) {
+       if (Object.values(result[0])[0] == 0) {
         var OTP = Math.floor(Math.random() * 10000);
         user[email] = {
           email,
