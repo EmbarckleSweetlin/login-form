@@ -50,6 +50,7 @@ export function LoginForm() {
   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
             onChange={(e) => setPassword(e.target.value)}
             required></input>
+            <a href="/forgetpassword">Forgot Password?</a>
         <input id="submit" type="submit" value="Login" />
         <div id="signup">
           <p>Don't have an account?</p>
