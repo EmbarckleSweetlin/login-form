@@ -15,7 +15,7 @@ export function SignupForm() {
     e.preventDefault();
     if (password === confirmPassword) {
       axios
-        .post("http://localhost:3001/signup", {
+        .post("http://localhost:3500/signup", {
           userName: userName,
           email: email,
           password: password,
@@ -33,7 +33,7 @@ export function SignupForm() {
           }
         });
     } else {
-      alert("password did not match");
+      alert("passwords did not match");
     }
   };
 
@@ -41,7 +41,7 @@ export function SignupForm() {
     <div id="signup-container">
       <h1>Signup Page</h1>
       <form onSubmit={inputValues}>
-        <div className="signup-div">
+       
           <label>User Name</label>
           <input
             type="text"
@@ -49,9 +49,8 @@ export function SignupForm() {
             onChange={(e) => {
               setUserName(e.target.value);
             }}
-          ></input>
-        </div>
-        <div className="signup-div">
+          required></input>
+       
           <label>Email</label>
           <input
             type="email"
@@ -60,9 +59,8 @@ export function SignupForm() {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-          ></input>
-        </div>
-        <div className="signup-div">
+            required></input>
+       
           <label>Password</label>
           <input
             type="password"
@@ -73,9 +71,8 @@ export function SignupForm() {
             onChange={(e) => {
               setPassword(e.target.value);
             }}
-          ></input>
-        </div>
-        <div className="signup-div">
+            required></input>
+        
           <label>Confirm Password</label>
           <input
             type="password"
@@ -83,13 +80,13 @@ export function SignupForm() {
             onChange={(e) => {
               setConfirmPassword(e.target.value);
             }}
-          ></input>
-        </div>
+            required></input>
+       
 
         <input id="signup" type="submit" value="Signup" />
         <div>
           <p>Already have an account?</p>
-          <a href="/">Login</a>
+          <a id="loginLink" href="/">Login</a>
         </div>
       </form>
     </div>
