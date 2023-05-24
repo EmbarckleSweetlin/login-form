@@ -75,7 +75,7 @@ app.post("/verify", (req, res) => {
               if (err) {
                 res.send(err);
               } else {
-                res.send("Successfully Completed");
+                res.send("Verified Successfully");
               }
             }
           )
