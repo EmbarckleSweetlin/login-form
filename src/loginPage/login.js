@@ -36,6 +36,7 @@ export function LoginForm() {
           <label className="login-label">Email</label>
           <input
             id="login-mailInput"
+            className="login-input"
             type="email"
             pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
             placeholder="Enter your mail id here"
@@ -43,6 +44,7 @@ export function LoginForm() {
           ></input>
           <label className="login-label">Password</label>
           <input
+          className="login-input"
             id="password-input"
             type="password"
             placeholder="password"
@@ -50,10 +52,10 @@ export function LoginForm() {
   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
             onChange={(e) => setPassword(e.target.value)}
             required></input>
-            <a href="/forgetpassword">Forgot Password?</a>
-        <input id="submit" type="submit" value="Login" />
-        <div id="signup">
-          <p>Don't have an account?</p>
+            <a id="login-forgetpassword" href="/forgetpassword">Forgot Password?</a>
+        <input id="loginButton" type="submit" value="Login" />
+        <div id="login-signup">
+          <p id="login-para">Don't have an account?</p>
           <a id="login-signupLink" href="/signup">
             Signup
           </a>
