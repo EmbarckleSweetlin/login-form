@@ -33,7 +33,7 @@ export function LoginForm() {
       <h1 id="login-head">Login Page</h1>
       <form class="login-form" onSubmit={handleSubmit}>
        
-          <label>Email</label>
+          <label className="login-label">Email</label>
           <input
             id="login-mailInput"
             type="email"
@@ -41,7 +41,7 @@ export function LoginForm() {
             placeholder="Enter your mail id here"
             onChange={(e) => setEmail(e.target.value)} required
           ></input>
-          <label>Password</label>
+          <label className="login-label">Password</label>
           <input
             id="password-input"
             type="password"
