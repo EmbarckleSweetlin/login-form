@@ -17,11 +17,12 @@ export function LoginForm() {
         password: password,
       })
       .then((res) => {
+        alert(res.data);
         if (res.data === "login successfully") {
-          alert(res.data);
+          
           navigate("/dashboard");
         } else if(res.data === "invalid mail id/password, please signup") {
-          alert(res.data);
+          // alert(res.data);
           navigate('/signup');
         }
       });
@@ -45,6 +46,8 @@ export function LoginForm() {
             id="password-input"
             type="password"
             placeholder="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
             onChange={(e) => setPassword(e.target.value)}
             required></input>
         <input id="submit" type="submit" value="Login" />
