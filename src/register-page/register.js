@@ -39,11 +39,12 @@ export function SignupForm() {
 
   return (
     <div id="signup-container">
-      <h1>Signup Page</h1>
-      <form onSubmit={inputValues}>
+      <h1 id="signup-head">Signup Page</h1>
+      <form id="signup-form" onSubmit={inputValues}>
        
-          <label>User Name</label>
+          <label className="signup-label">User Name</label>
           <input
+          id="singup-nameInput"
             type="text"
             placeholder="user name"
             onChange={(e) => {
@@ -51,8 +52,9 @@ export function SignupForm() {
             }}
           required></input>
        
-          <label>Email</label>
+          <label className="signup-label">Email</label>
           <input
+           id="singup-mailInput"
             type="email"
             placeholder="mail"
             pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
@@ -61,8 +63,9 @@ export function SignupForm() {
             }}
             required></input>
        
-          <label>Password</label>
+          <label className="signup-label">Password</label>
           <input
+           id="singup-passInput"
             type="password"
             placeholder="password"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -73,8 +76,9 @@ export function SignupForm() {
             }}
             required></input>
         
-          <label>Confirm Password</label>
+          <label className="signup-label">Confirm Password</label>
           <input
+           id="singup-conpassInput"
             type="password"
             placeholder="Confirm password"
             onChange={(e) => {
@@ -83,9 +87,9 @@ export function SignupForm() {
             required></input>
        
 
-        <input id="signup" type="submit" value="Signup" />
+        <input id="signup-button" type="submit" value="Signup" />
         <div>
-          <p>Already have an account?</p>
+          <p id="signup-para">Already have an account?</p>
           <a id="loginLink" href="/">Login</a>
         </div>
       </form>
