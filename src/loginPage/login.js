@@ -12,49 +12,45 @@ export function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/login", {
+      .post("http://localhost:3500/login", {
         email: email,
         password: password,
       })
       .then((res) => {
-        alert(res.data);
         if (res.data === "login successfully") {
+          alert(res.data);
           navigate("/dashboard");
+        } else if(res.data === "invalid mail id/password, please signup") {
+          alert(res.data);
+          navigate('/signup');
         }
       });
   };
 
   return (
     <div className="login-container">
-      <img
-        id="logo"
-        src="https://econnect.embarckle.com/logo-text-light.63fac4b2.png"
-        alt="Loading"
-      />
       <h1 id="login-head">Login Page</h1>
       <form class="login-form" onSubmit={handleSubmit}>
-        <div id="email-container">
+       
           <label>Email</label>
           <input
-            id="mail-input"
+            id="login-mailInput"
             type="email"
+            pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
             placeholder="Enter your mail id here"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)} required
           ></input>
-        </div>
-        <div id="pass-container">
           <label>Password</label>
           <input
             id="password-input"
             type="password"
             placeholder="password"
             onChange={(e) => setPassword(e.target.value)}
-          ></input>
-        </div>
+            required></input>
         <input id="submit" type="submit" value="Login" />
         <div id="signup">
-          <p>Not have an account?</p>
-          <a id="signup-link" href="/signup">
+          <p>Don't have an account?</p>
+          <a id="login-signupLink" href="/signup">
             Signup
           </a>
         </div>
