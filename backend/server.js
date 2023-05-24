@@ -96,9 +96,7 @@ app.post("/login", (req, res) => {
     (err, result) => {
       if (Object.values(result[0])[0] == 1) {
         res.send("login successfully");
-      } else if(email==undefined || password==undefined){
-        res.send('please enter the details');
-      }else if(err){
+      } else if(err){
         res.send(err);
       } 
       else {
