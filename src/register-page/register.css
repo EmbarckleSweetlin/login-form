@@ -33,7 +33,9 @@ border: none;
 border-radius: 10px;
 margin-left: 50%;
 margin-top: 1rem;
+cursor: pointer;
 }
+
 
 #signup-div {
     display: flex;
