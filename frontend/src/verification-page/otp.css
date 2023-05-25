@@ -1,13 +1,11 @@
-body{
-    color:white;
-}
 
 #otp-container{
     width: 500px;
     height:200px;
     background-color: navy;
     opacity:0.8;
-    margin-top:20%
+    margin-top:20%;
+    color:white;
 }
 #otp-head{
     padding: 20px;
