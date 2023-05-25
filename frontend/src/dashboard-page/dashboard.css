@@ -5,8 +5,26 @@
   justify-content: center;
   margin-top: 10rem;
   opacity:0.7;
+  color: white;
 
 }
 #dashboard-head{
     font-size: 50px;
+}
+#button-handle{
+  /* background-color: yellow; */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#logoutButton{
+background-color: orange;
+border: none;
+padding:10px;
+/* margin-top: 2.5rem; */
+}
+#signoutButton{
+  background-color: rgba(55, 177, 248, 0.966);
+  border:none;
+  padding: 10px;
 }
