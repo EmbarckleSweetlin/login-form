@@ -149,8 +149,19 @@ app.post("/forgetverify", (req, res) => {
           res.send('invalid otp')}
         })
 
+// app.post('/delete', (req,res)=> {
+//   const email = req.body.email;
+//   dbConnection.query("Delete from test1.users where email=?", [email], (err, result)=> {
+//     if(err){
+//       console.log(err);
+//     } else{
+//       res.send('your Signout was successful');
+//   }
+//   })
+// })
 
 app.get("/about", (req, res) => {
+
   dbConnection.query("SELECT * from test1.users", (err, result) => {
     if (err) {
       console.log(err);
