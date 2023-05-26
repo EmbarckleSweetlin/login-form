@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import {FaEyeSlash} from 'react-icons/fa';
-// import { IoMdEye } from "react-icons/gi";
 import "./login.css";
 
 export function LoginForm() {
