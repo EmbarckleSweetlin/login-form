@@ -80,3 +80,13 @@ align-items: center;
     margin-left: 10px;
     /* background-color: #6CB4EE; */
 }
+/* #eyeon{
+    position: absolute;
+    top: 50%;
+} */
+#icons{
+    /* background-color: yellow; */
+    position: absolute;
+    top: 41%;
+    left: 81%;
+}

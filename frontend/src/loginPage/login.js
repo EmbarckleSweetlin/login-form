@@ -2,12 +2,17 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaEye } from "react-icons/fa";
+import {FaEyeSlash} from 'react-icons/fa';
+// import { IoMdEye } from "react-icons/gi";
 import "./login.css";
 
 export function LoginForm() {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [eyeon, setEyeon] = useState(false);
+
   
 
   const handleSubmit = (e) => {
@@ -43,16 +48,20 @@ export function LoginForm() {
             placeholder="Enter your mail id here"
             onChange={(e) => setEmail(e.target.value)} required
           ></input>
+          
           <label className="login-label">Password</label>
           <input
           className="login-input"
             id="password-input"
-            type="password"
+            type={eyeon ? "text" : "password"}
             placeholder="password"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
             onChange={(e) => setPassword(e.target.value)}
-            required></input>
+            required autoComplete="off"></input>
+            <div id="icons" onClick={()=>{setEyeon(!eyeon)}}>
+            {eyeon? <FaEye id="eyeon" color="black" /> :
+       <FaEyeSlash color="black"/>}</div>
             <a id="login-forgetpassword" href="/forgetpassword">Forgot Password?</a>
         <input id="loginButton" type="submit" value="Login" />
         <div id="login-signup">
