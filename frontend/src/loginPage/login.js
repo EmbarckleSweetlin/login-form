@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 
 export function LoginForm() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const navigate = useNavigate();
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +20,6 @@ export function LoginForm() {
       .then((res) => {
         alert(res.data);
         if (res.data === "login successfully") {
-          
           navigate("/dashboard");
         } else if(res.data === "invalid mail id/password, please signup") {
           // alert(res.data);
