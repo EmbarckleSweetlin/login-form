@@ -1,8 +1,8 @@
 import React from "react";
 import './dashboard.css';
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import axios from 'axios';
+// import { useLocation } from "react-router-dom";
+// import axios from 'axios';
 
 export function Dashboard() {
   const navigate = useNavigate();
