@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { FaEye } from "react-icons/fa";
+import {FaEyeSlash} from 'react-icons/fa';
 import "./register.css";
 
 export function SignupForm() {
@@ -10,6 +12,8 @@ export function SignupForm() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [confirmPassword, setConfirmPassword] = useState();
+  const [eyeon, setEyeon] = useState(false);
+  const [eyeon2, setEyeon2] = useState(false);
 
   const inputValues = (e) => {
     e.preventDefault();
@@ -69,7 +73,7 @@ export function SignupForm() {
           <input
            id="singup-passInput"
            className="signupInput"
-            type="password"
+            type={eyeon? "text" : "password"}
             placeholder="password"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
             title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
@@ -78,18 +82,23 @@ export function SignupForm() {
               setPassword(e.target.value);
             }}
             required></input>
-        
+        <div id="icons-signup" onClick={()=>{setEyeon(!eyeon)}}>
+            {eyeon? <FaEye id="eyeon" color="black" /> :
+       <FaEyeSlash color="black"/>}</div>
+
           <label className="signup-label">Confirm Password</label>
           <input
            id="singup-conpassInput"
-            type="password"
+           type={eyeon2? "text" : "password"}
             className="signupInput"
             placeholder="Confirm password"
             onChange={(e) => {
               setConfirmPassword(e.target.value);
             }}
             required></input>
-       
+       <div id="icons-signup2" onClick={()=>{setEyeon2(!eyeon2)}}>
+            {eyeon2? <FaEye color="black" /> :
+       <FaEyeSlash color="black"/>}</div>
 
         <input id="signup-button" type="submit" value="Signup" />
         <div id="signup-div">
