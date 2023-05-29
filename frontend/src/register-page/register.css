@@ -2,7 +2,10 @@
 #signup-container {
     margin-top: 3rem;
     width: 500px;
-    background-color: #1313628c;
+    background-color: #b9b9dd46;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+-webkit-backdrop-filter: blur( 1.5px );
     color: white;
     border-radius: 20px;
 }
@@ -23,6 +26,7 @@
     padding: 5px;
     border-radius: 10px;
     margin: 1rem 0 1rem 2rem;
+    border: none;
 }
 
 #signup-button {
@@ -43,7 +47,7 @@ cursor: pointer;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    margin-left: 10%;
+    margin-left: 15%;
 
 }
 #signup-para{
@@ -56,6 +60,7 @@ font-size: 18px;
 }
 #icons-signup{
     position: relative;
+    /* background-color: green; */
     top: -40px;
     left: 90%;
     width: 1rem;
@@ -67,5 +72,4 @@ font-size: 18px;
     left: 450px;
     cursor: pointer;
     width: 1rem;
-    /* transform: translateY(10%); */
 }

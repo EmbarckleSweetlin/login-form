@@ -3,15 +3,20 @@ body {
   width:100vw;
   height:100vh;
   background-color:  #010146f2;
-  /* background-image: url("https://wallpaperaccess.com/full/2314950.jpg"); */
+  background-image: url("https://blog.depositphotos.com/wp-content/uploads/2017/07/How-to-Use-Landscape-Photography-in-Creative-Campaigns-1.jpg.webp");
+  /* https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fblue-background&psig=AOvVaw30TZCiGiFngMlms1NSy6y3&ust=1685428386535000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPji-p70mf8CFQAAAAAdAAAAABAI */
   /* background: rgba( 255, 255, 255, 0.25 );
+  https://st2.depositphotos.com/1030808/11629/i/950/depositphotos_116298346-stock-photo-beautiful-lake-sunset.jpg
+  https://wallpaperaccess.com/full/2314950.jpg
+  https://blog.depositphotos.com/wp-content/uploads/2017/07/How-to-Use-Landscape-Photography-in-Creative-Campaigns-1.jpg.webp
+  https://st2.depositphotos.com/1030808/11630/i/450/depositphotos_116301016-stock-photo-mountains-with-lake-reflection.jpg
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 ); */
-/* background-position: center; */
-/* background-size: cover; */
+background-position: center;
+background-size: cover;
 /* background-repeat: no-repeat; */
   display: flex;
 justify-content: center;
