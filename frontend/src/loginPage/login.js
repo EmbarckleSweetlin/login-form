@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import {FaEyeSlash} from 'react-icons/fa';
 import "./login.css";
@@ -57,17 +58,17 @@ export function LoginForm() {
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
             onChange={(e) => setPassword(e.target.value)}
-            required autoComplete="off"></input>
+            required autoComplete="off"/>
             <div id="icons" onClick={()=>{setEyeon(!eyeon)}}>
             {eyeon? <FaEye id="eyeon" color="black" /> :
        <FaEyeSlash color="black"/>}</div>
-            <a id="login-forgetpassword" href="/forgetpassword">Forgot Password?</a>
+            <Link id="login-forgetpassword" to="/forgetpassword">Forgot Password?</Link>
         <input id="loginButton" type="submit" value="Login" />
         <div id="login-signup">
           <p id="login-para">Don't have an account?</p>
-          <a id="login-signupLink" href="/signup">
+          <Link id="login-signupLink" to="/signup">
             Signup
-          </a>
+          </Link>
         </div>
       </form>
     </div>
