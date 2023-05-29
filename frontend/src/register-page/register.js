@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import {FaEyeSlash} from 'react-icons/fa';
 import "./register.css";
@@ -103,7 +104,7 @@ export function SignupForm() {
         <input id="signup-button" type="submit" value="Signup" />
         <div id="signup-div">
           <p id="signup-para">Already have an account?</p>
-          <a id="loginLink" href="/">Login</a>
+          <Link id="loginLink" to="/">Login</Link>
         </div>
       </form>
     </div>
