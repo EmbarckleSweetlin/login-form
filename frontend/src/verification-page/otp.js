@@ -44,7 +44,7 @@ export function Otp() {
 
   return (
     <div id="otp-container">
-      <h1 id="otp-head">Please verify your email with otp </h1>
+      <h1 id="otp-head">Please verify your email </h1>
       <label id="otp-label">OTP : </label>
       <input
       id="otp-input"

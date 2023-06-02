@@ -44,7 +44,7 @@ export function SignupForm() {
 
   return (
     <div id="signup-container">
-      <h1 id="signup-head">Signup Page</h1>
+      <h1 id="signup-head">Signup</h1>
       <form id="signup-form" onSubmit={inputValues}>
        
           <label className="signup-label">User Name</label>

@@ -86,6 +86,7 @@ app.post("/verify", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
+  try{
   const { email, password } = req.body;
   dbConnection.query(
     "SELECT EXISTS(SELECT * FROM users WHERE email=? AND password=? )",
@@ -100,7 +101,9 @@ app.post("/login", (req, res) => {
         res.send("invalid mail id/password, please signup");
       }
     }
-  );
+  );} catch(err){
+    alert(err.name);
+  }
 });
 
 app.post('/forgetpassword', (req, res)=>{
