@@ -36,9 +36,9 @@ axios
     } else if(res.data==="error/you don't have an account, please signup"){
         alert(res.data);
         navigate('/signup'); 
-    } 
-}).catch((err)=> {
-    alert(err);
+    } else{
+        alert(res.data);
+    }
 })
     } else{
         alert('password did not match ');

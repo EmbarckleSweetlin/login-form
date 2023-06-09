@@ -23,14 +23,17 @@ export function LoginForm() {
         password: password,
       })
       .then((res) => {
-        alert(res.data);
+        // alert(res.data);
         if (res.data === "login successfully") {
+          alert(res.data);
           navigate("/dashboard");
         } else if(res.data === "invalid mail id/password, please signup") {
           // alert(res.data);
           navigate('/signup');
+        } else{
+          alert(res.data);
         }
-      });
+      })
   };
 
   return (

@@ -36,7 +36,7 @@ export function SignupForm() {
               state: { email },
             });
           }
-        });
+        })
     } else {
       alert("passwords did not match");
     }

@@ -38,7 +38,7 @@ export function Otp() {
         } else {
           alert(res.data);
         }
-      });
+      })
     } 
   };
 
@@ -51,6 +51,7 @@ export function Otp() {
         type="text"
         placeholder="enter your otp"
         onChange={(e) => setOtp(e.target.value)} 
+        autoComplete="off"
       required></input>
       <button id="otp-submit" onClick={handleClick}>Submit</button>
     </div>
