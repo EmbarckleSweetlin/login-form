@@ -31,6 +31,7 @@ const transporter = mailer.createTransport(
 );
 
 app.post("/signup", (req, res) => {
+  try{
   const userName = req.body.userName;
   const email = req.body.email;
   const password = req.body.password;
@@ -61,10 +62,14 @@ app.post("/signup", (req, res) => {
         res.send("you already have an account");
       }
     }
-  );
+  );}
+  catch(err){
+    res.send(err.message)
+  }
 });
 
 app.post("/verify", (req, res) => {
+  try{
   const { otp, email } = req.body;
 
   if (user[email].OTP == otp) {
@@ -82,6 +87,9 @@ app.post("/verify", (req, res) => {
   }
    else {
     res.send("otp is invalid");
+  }}
+  catch(err){
+    res.send(err.message);
   }
 });
 
@@ -102,11 +110,12 @@ app.post("/login", (req, res) => {
       }
     }
   );} catch(err){
-    alert(err.name);
+    res.send(err.message);
   }
 });
 
 app.post('/forgetpassword', (req, res)=>{
+  try{
   const {newpassword, email} = req.body;
   dbConnection.query(
     "SELECT EXISTS(SELECT * FROM users WHERE email=? )",
@@ -132,12 +141,16 @@ app.post('/forgetpassword', (req, res)=>{
   } else{
     res.send("error/you don't have an account, please signup")}
     }
-  )
+  )} catch(err){
+    res.send(err.message);
+  }
 })
 
-app.post("/forgetverify", (req, res) => {
-  const { otp, email, newpassword } = req.body;
 
+app.post("/forgetverify", (req, res) => {
+  try{
+  const { otp, email, newpassword } = req.body;
+  
   if (user[email].OTP == otp) {  
         dbConnection.query(
           "UPDATE users set password=? where email=?",
@@ -150,6 +163,9 @@ app.post("/forgetverify", (req, res) => {
           }) 
         } else{
           res.send('invalid otp')}
+        }catch(err){
+          res.send(err.message);
+        }
         })
 
 // app.post('/delete', (req,res)=> {
@@ -158,21 +174,21 @@ app.post("/forgetverify", (req, res) => {
 //     if(err){
 //       console.log(err);
 //     } else{
-//       res.send('your Signout was successful');
+//       res.send('your account was deleted');
 //   }
 //   })
 // })
 
-app.get("/about", (req, res) => {
+// app.get("/about", (req, res) => {
 
-  dbConnection.query("SELECT * from test1.users", (err, result) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.send("connected");
-    }
-  });
-});
+//   dbConnection.query("SELECT * from test1.users", (err, result) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       res.send("connected");
+//     }
+//   });
+// });
 
 app.listen(3500, function () {
   console.log("success");
